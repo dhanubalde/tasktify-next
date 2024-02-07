@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs"
 
 
 interface PlatformLayoutProps { 
@@ -8,9 +9,9 @@ const PlatformLayout = ({
   children
 }: PlatformLayoutProps) => {
   return (
-    <div>
+    <ClerkProvider>
       { children }
-    </div>
+    </ClerkProvider>
   )
 }
 
